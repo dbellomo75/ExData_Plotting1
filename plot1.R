@@ -3,7 +3,7 @@ plot1 <- function() {
 ## Expected size of the data file: 2075260*9*8/(2^20)~=142Mb << myRAMsize
 
 ## Read the data into a data frame
-allData <- read.table("household_power_consumption.txt",sep=";", nrows=2075260, header=TRUE)
+allData <- read.table("household_power_consumption.txt",sep=";", nrows=100000, header=TRUE)
 
 ## Get the data for two days: "2007-02-01" and "2007-02-02"
 allDates<-as.Date(allData$Date, "%d/%m/%Y")								# factor -> Date
@@ -23,3 +23,4 @@ dev.copy(png, file = "plot1.png", width=480, height=480) ## Copy my plot to a PN
 dev.off() # close the dedive
 }
 
+# 2075260
